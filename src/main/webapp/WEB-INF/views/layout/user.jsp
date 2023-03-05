@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="decorator"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +13,11 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Bootstrap styles -->
-<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<link href="<c:url value ="assets/user/css/bootstrap.css"></c:url>" rel="stylesheet" />
 <!-- Customize styles -->
 <link href="style.css" rel="stylesheet" />
 <!-- font awesome styles -->
-<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="<c:url value ="assets/user/font-awesome/css/font-awesome.css"></c:url>" rel="stylesheet">
 <!--[if IE 7]>
 			<link href="css/font-awesome-ie7.min.css" rel="stylesheet">
 		<![endif]-->
@@ -27,7 +27,7 @@
 		<![endif]-->
 
 <!-- Favicons -->
-<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="shortcut icon" href="<c:url value ="assets/user/ico/favicon.ico"></c:url>">
 </head>
 <body>
 	<!-- 
