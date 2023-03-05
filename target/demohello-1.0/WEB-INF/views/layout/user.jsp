@@ -73,8 +73,10 @@ footer {
 </style>
 </head>
 <body>
-<%@include file="/WEB-INF/views/layout/user/header.jsp" %>>
-<decorator:body />
+<%@include file = "/WEB-INF/views/layout/user/header.jsp" %>
+<!-- header -->
+
+<decorator:body/>
 <%@include file="/WEB-INF/views/layout/user/footer.jsp" %>>
 
 </body>

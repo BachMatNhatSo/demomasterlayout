@@ -1,5 +1,10 @@
-<decorators default="/WEB-INF/views/layout">
-	<decorator name="user" page="user.jsp">
-		<pattern>/trang-chu/*</pattern>		
-	</decorator>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/WEB-INF/views/layout">
+    <decorator name="user" page="user.jsp">
+       <pattern>/trang-chu/*</pattern>
+       <pattern>/</pattern>
+    </decorator>
+    
+
 </decorators>

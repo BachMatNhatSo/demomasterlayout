@@ -14,7 +14,7 @@ import demohello.Model.Student;
 
 @Controller
 public class HomeController {
-	@RequestMapping("/trang-chu")
+	@RequestMapping("/")
 	//@RequestMapping(value={"/","/trang-chu"},method=RequestMethod.GET)
 	public String Index(HttpSession session,ModelMap model) {
 //		session.setAttribute("fname","Bách Mật Nhất Sơ");

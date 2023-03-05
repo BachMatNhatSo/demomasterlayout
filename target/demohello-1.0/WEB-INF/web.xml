@@ -18,14 +18,15 @@
 	<filter>
 		<filter-name>sitemesh</filter-name>
 		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
-		 <init-param>
- 	<param-name>contexConfigLocation</param-name>
- 	<param-value>/WEB-INF/demo-config-servlet.xml</param-value>
-    </init-param>
+		<init-param>
+			<param-name>contextConfigLocaltion</param-name>
+			<param-value>/WEB-INF/demo-config-servlet.xml</param-value>
+		</init-param>
 	</filter>
+	
 	<filter-mapping>
 		<filter-name>sitemesh</filter-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
 </web-app>
