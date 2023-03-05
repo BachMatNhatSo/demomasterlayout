@@ -14,8 +14,8 @@ import demohello.Model.Student;
 
 @Controller
 public class HomeController {
-	@RequestMapping("/")
-	//@RequestMapping(value={"/","/trang-chu"},method=RequestMethod.GET)
+	
+	@RequestMapping(value={"/","/trang-chu"},method=RequestMethod.GET)
 	public String Index(HttpSession session,ModelMap model) {
 //		session.setAttribute("fname","Bách Mật Nhất Sơ");
 //		model.addAttribute("salary","2000");
@@ -35,5 +35,9 @@ public class HomeController {
 //		list.add("Hành");
 //		model.addAttribute("items",list);
 		return "user/index";
+	}@RequestMapping(value={"/product"},method=RequestMethod.GET)
+	public String IndexProduct(HttpSession session,ModelMap model) {
+//		
+		return "user/product";
 	}
 }
