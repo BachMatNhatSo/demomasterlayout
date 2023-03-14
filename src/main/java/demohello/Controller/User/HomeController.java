@@ -14,17 +14,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 import demohello.Dao.SlidesDao;
 import demohello.Model.Student;
+import demohello.Service.User.IHomeService;
 
 @Controller
 public class HomeController {
 
 	@Autowired
-	SlidesDao homedao;
+	IHomeService homeService;
 
 	@RequestMapping(value = { "/", "/trang-chu" })
 	public ModelAndView Index(HttpSession session, ModelMap model) {
 		ModelAndView mv = new ModelAndView("user/index");
-		mv.addObject("slides",homedao.GetDataSlides());
+		mv.addObject("slides",homeService.GetDataSlides());
 		return mv;
 	}
 
