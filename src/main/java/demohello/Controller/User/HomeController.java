@@ -1,32 +1,23 @@
-package demohello.Controller.User;
-
-import java.util.ArrayList;
-import java.util.List;
+	package demohello.Controller.User;
 
 import javax.servlet.http.HttpSession;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import demohello.Dao.SlidesDao;
-import demohello.Model.Student;
-import demohello.Service.User.IHomeService;
-
 @Controller
-public class HomeController {
-
-	@Autowired
-	IHomeService homeService;
+public class HomeController extends BaseController{
 
 	@RequestMapping(value = { "/", "/trang-chu" })
 	public ModelAndView Index(HttpSession session, ModelMap model) {
-		ModelAndView mv = new ModelAndView("user/index");
-		mv.addObject("slides",homeService.GetDataSlides());
-		return mv;
+		//ModelAndView mv = new ModelAndView("user/index");
+		_mvShare.addObject("slides",_homeService.GetDataSlides());
+		_mvShare.addObject("categorys",_homeService.GetDataCategorys());
+		_mvShare.setViewName("user/index");
+		return _mvShare;
 	}
 
 	@RequestMapping(value = { "/product" }, method = RequestMethod.GET)
