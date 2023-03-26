@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class CategoryController {
 	@RequestMapping(value = "/san-pham/{id}")
 	public ModelAndView Product(@PathVariable String id) {
-		ModelAndView mv = new ModelAndView("user/category");
+		ModelAndView mv = new ModelAndView("user/products/category");
 		mv.addObject("idCategory", id);
 		return mv;
 	}
